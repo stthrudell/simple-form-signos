@@ -1,4 +1,4 @@
-## Form simples para buscar o signos
+## Form simples para buscar o signo
 
 Este formulário foi desenvolvido para o forum da disciplina de Programação Web do curso de Análise e Desenvolvimento de Sistemas.
 
