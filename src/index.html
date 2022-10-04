@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- CSS only -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+			crossorigin="anonymous"
+		/>
+		<style>
+			main {
+				max-width: 500px;
+			}
+		</style>
+		<title>Descubra seu signo</title>
+	</head>
+	<body class="text-center h-100">
+		<main class="form-signin w-100 m-auto my-5 max-width-500">
+			<form method="post" action="/signos.php">
+				<img
+					class="mb-4 rounded"
+					src="https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.2191331:1615207169/signos-do-horoscopo.jpg"
+					width="350"
+					height="300"
+				/>
+				<div class="form-floating">
+					<input
+						type="date"
+						class="form-control"
+						id="floatingInput"
+                        name="data_nascimento"
+						placeholder="Insira sua data de nascimento"
+						required
+					/>
+					<label for="floatingInput">Insira sua data de nascimento</label>
+				</div>
+				<div class="my-3">
+					<a class="w-40 btn btn-lg btn-light" id="cancel">
+						Cancelar
+					</a>
+					<button class="w-40 btn btn-lg btn-primary" type="submit">
+						Enviar
+					</button>
+				</div>
+			</form>
+		</main>
+		<script>
+			const btnCancel = document.getElementById("cancel");
+			btnCancel.addEventListener("click", function (e) {
+				const usuario = document.getElementById("floatingInput");
+				const senha = document.getElementById("floatingPassword");
+
+				usuario.value = "";
+				senha.value = "";
+
+				usuario.focus();
+			});
+		</script>
+	</body>
+</html>
